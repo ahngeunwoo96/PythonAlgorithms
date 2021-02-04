@@ -13,5 +13,5 @@ for person in people:
         if person[0] < another_person[0] and  person[1] < another_person[1]:
             result += 1
     
-    print(result + 1, end=" "
+    print(result + 1, end=" ")
 print()
