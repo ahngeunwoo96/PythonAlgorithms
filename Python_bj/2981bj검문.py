@@ -1,20 +1,18 @@
 n = int(input())
 num = []
+num2 = []
 for i in range(n):
     num.append(int(input()))
 
-answer = []
-for i in range(2, min(num) + 1):
-    for j in range(len(num)):
-        if j == 0:
-            rest = num[j] % i
+for i in range(n-1):
+    num2.append(abs(num[i] - num[i+1]))
 
-        else:
-            if rest != num[j] % i:
-                break
+def GCD(a, b):
+    if b == 0:
+        return a
 
-    else:
-        answer.append(i)
+    return GCD(b, b%a)
 
-for i in answer:
-    print(i, end=" ")
+for i in range(n-1):
+    
+
