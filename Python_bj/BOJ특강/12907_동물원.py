@@ -21,8 +21,6 @@ def solution(n, cat, rabbit, cnt):
             # 아무곳에도 넣을 수 없는 경우
             return
 
-
-
 N = int(input())
 animals = list(map(int, input().split()))
 
