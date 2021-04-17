@@ -79,7 +79,6 @@ def find(a, b):
 N, M = map(int, input().split())
 m = [list(map(int, input().split())) for _ in range(N)] # 입력받은 map을 저장할 변수
 num_m = [[0] * M for _ in range(N)] # 땅에 1~N까지 번호를 붙여서 저장할 map
-parent = [i for i in range(N)] # 부모 노드 확인
 
 # 1~N번까지 섬을 labeling 하기
 land_cnt = 1
@@ -90,6 +89,7 @@ for i in range(N):
             land_cnt += 1
 
 distances = [[0] * (land_cnt-1) for _ in range(land_cnt-1)] # 섬끼리의 이동거리를 저장할 배열
+parent = [i for i in range(land_cnt-1)] # 부모 노드 확인
 
 # 섬끼리의 최소 거리를 구하기
 for i in range(N):
@@ -122,3 +122,14 @@ for i in range(land_cnt-1):
 print(ans)
 
 
+'''
+8 8
+0 0 0 1 1 1 1 0
+0 1 1 1 1 0 1 0
+0 1 0 1 1 1 0 0
+0 1 0 0 0 1 0 0
+0 0 0 1 0 0 1 0
+0 0 0 0 0 1 0 0
+0 1 1 1 0 0 0 0
+0 1 0 0 0 1 0 0
+'''
